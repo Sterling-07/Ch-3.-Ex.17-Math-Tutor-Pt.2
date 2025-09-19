@@ -11,15 +11,15 @@ using namespace std;
 
 int main()
 {
-	char alpha;
 	double numb1, numb2;
+	char al;
 
 	cout << "Enter the first number: ";
 	cin >> numb1;
 	cout << "Enter the second number: ";
 	cin >> numb2;
-	cout << "Please enter your answer when you're ready: ";
-	cin.get(alpha);
-	cin.ignore(alpha);
+	cin.get();
+	cout << "Press enter when you're ready to see the answer: \n";
+	cin.get();
 	cout << "The answer is " << numb1 + numb2;
 }
