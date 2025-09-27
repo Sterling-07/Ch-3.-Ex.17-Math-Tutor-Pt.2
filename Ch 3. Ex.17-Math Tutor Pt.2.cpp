@@ -7,19 +7,20 @@ answer to the problem.
 */
 
 #include <iostream>
+#include <random>
 using namespace std;
 
 int main()
 {
-	double numb1, numb2;
-	char al;
+	//Create necessary variables
+	random_device engine;
+	uniform_int_distribution<int> randomInt(0, 999);
+	int numb1 = randomInt(engine), numb2 = randomInt(engine);
 
-	cout << "Enter the first number: ";
-	cin >> numb1;
-	cout << "Enter the second number: ";
-	cin >> numb2;
+	cout << "Add the two values together: \n" << numb1 << " + " << numb2;
+
 	cin.get();
-	cout << "Press enter when you're ready to see the answer: \n";
+	cout << "\nPress enter when you're ready to see the answer \n";
 	cin.get();
 	cout << "The answer is " << numb1 + numb2;
 }
