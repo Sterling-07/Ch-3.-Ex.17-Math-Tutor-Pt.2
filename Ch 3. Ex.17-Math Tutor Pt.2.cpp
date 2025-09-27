@@ -12,15 +12,19 @@ using namespace std;
 
 int main()
 {
-	//Create necessary variables
+	//Create your random number engine, distribution object, and necessary variables
 	random_device engine;
 	uniform_int_distribution<int> randomInt(0, 999);
 	int numb1 = randomInt(engine), numb2 = randomInt(engine);
 
+	//Display the equation of the random intergers
 	cout << "Add the two values together: \n" << numb1 << " + " << numb2;
 
+	//Pause the program to allow time for solving the equation
 	cin.get();
 	cout << "\nPress enter when you're ready to see the answer \n";
 	cin.get();
+
+	//Display the answer
 	cout << "The answer is " << numb1 + numb2;
 }
